@@ -1,15 +1,26 @@
-<footer class="bg-gray-800 text-white py-4 text-center">
+---
+import { Icon } from "astro-icon/components";
+---
+
+<footer
+  class="text-white px-2 py-6 text-center rounded-t-3xl shadow-inner
+  bg-gradient-to-br
+    from-[oklch(0.18_0.02_285.823)]
+    via-[oklch(0.35_0.04_285.823)]
+    to-[oklch(0.55_0.08_285.823)]"
+>
   <div class="container mx-auto">
-    <p>
+    <div class="text-sm mb-2">
       &copy; {new Date().getFullYear()} Daniel Ospina. Todos los derechos reservados.
-    </p>
-    <ul class="flex justify-center space-x-4 mt-2">
+    </div>
+    <ul class="flex justify-center space-x-6 mt-2 text-2xl">
       <li>
         <a
           href="https://twitter.com"
           target="_blank"
           rel="noopener noreferrer"
-          class="hover:text-blue-400">Twitter</a
+          class="hover:text-yellow-300 transition"
+          ><Icon name="mdi:twitter" /></a
         >
       </li>
       <li>
@@ -17,7 +28,7 @@
           href="https://github.com"
           target="_blank"
           rel="noopener noreferrer"
-          class="hover:text-blue-400">GitHub</a
+          class="hover:text-yellow-300 transition"><Icon name="mdi:github" /></a
         >
       </li>
       <li>
@@ -25,7 +36,8 @@
           href="https://linkedin.com"
           target="_blank"
           rel="noopener noreferrer"
-          class="hover:text-blue-400">LinkedIn</a
+          class="hover:text-yellow-300 transition"
+          ><Icon name="mdi:linkedin" /></a
         >
       </li>
     </ul>

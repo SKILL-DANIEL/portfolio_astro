@@ -4,7 +4,7 @@ export const projects = [
         title: "Portfolio",
         description: "Un portfolio personal donde muestro mis proyectos y habilidades.",
         technologies: ["Astro", "React", "TypeScript"],
-        link: "https://devdaniel.info",
+        link: "https://github.com/SKILL-DANIEL/portfolio_astro",
     },
     {
         id: 2,

@@ -1,16 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Home from "../components/Home.astro";
+import About from "../components/About.astro";
+import Projects from "../components/Projects.astro";
+import Contact from "../components/Contact.astro";
 ---
 
 <Layout
   title="Inicio"
   description="Bienvenido a mi portafolio personal. Soy un desarrollador web apasionado por la tecnología y la creación de experiencias digitales únicas."
 >
-  <main class="text-center py-10 px-4">
-    <section class="max-w-xl mx-auto">
-      <img src="/profile.jpg" alt="Mi foto" class="w-32 h-32 rounded-full mx-auto mb-4" />
-      <h1 class="text-3xl font-bold mb-2">Hola, soy Daniel Ospina</h1>
-      <p class="text-lg text-gray-600">Desarrollador web especializado en React, Node.js y bases de datos.</p>
-    </section>
+  <main class="text-center py-10 px-4 text-white">
+    <Home />
+    <About />
+    <Projects />
+    <Contact />
   </main>
 </Layout>

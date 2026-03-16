@@ -1,16 +1,82 @@
+---
+import {
+  Astronav,
+  MenuItems,
+  MenuIcon,
+  Dropdown,
+  DropdownItems,
+  DropdownSubmenu,
+} from "astro-navbar";
+import { Icon } from "astro-icon/components";
+---
 
-<header class="fixed w-screen py-4 z-10 backdrop-blur-sm top-0 px-8 lg:px-0">
-  <div class="grid grip-cols-3 max-w-7xl mx-auto items-center justify-between">
-  <a href="/" class=col-span-1">
-    <img src="/logo.svg" alt="Logo" class="h-8 w-8 inline-block mr-2" />
+<header
+  class="fixed w-screen md:py-4 py-1 z-10 backdrop-blur-sm top-0 lg:px-8 sm:px-0"
+>
+  <div>
+    <Astronav>
+      <div class="sm:flex flex-col sm:flex-row justify-between items-center">
+        <div class="flex justify-between items-center sm-px-4 px-2">
+          <a href="/" class="flex items-center">
+            <img src="/icon.png" alt="Logo" class="w-12 h-12" />
+          </a>
+          <div class="sm:hidden flex items-center gap-2">
+            <MenuIcon class="w-8 h-8 text-white cursor-pointer" />
+          </div>
+        </div>
+        <MenuItems
+          class="hidden sm:flex sm:w-full sm:animate-none animate-slide-down transition-all duration-300 transform sm:justify-center sm:items-center"
+        >
+          <ul
+            class="flex flex-col sm:flex-row not-sm:mt-2 gap-2 lg:gap-4 text-white w-full justify-center items-center"
+          >
+            <li
+              class="flex justify-center w-full md:w-auto not-sm:hover:bg-gray-800 border-transparent transition-all min-h-[50px] sm:text-base text-xs duration-300"
+            >
+              <a
+                href="/"
+                class="flex items-center md:w-auto not-sm:w-full justify-center gap-2 md:py-2 sm:hover:bg-gray-800 rounded-2xl border-transparent hover:border-white transition-all min-h-[50px] sm:text-base sm:px-4 sm:py-4 text-xs duration-300"
+              >
+                <Icon name="mdi:home" class="w-6 h-6" />
+                <span class="sm:text- sm:block">Inicio</span>
+              </a>
+            </li>
+            <li
+              class="flex justify-center w-full md:w-auto not-sm:hover:bg-gray-800 border-transparent transition-all min-h-[50px] sm:text-base text-xs duration-300"
+            >
+              <a
+                href="#about"
+                class="flex items-center md:w-auto not-sm:w-full justify-center gap-2 md:py-2 sm:hover:bg-gray-800 rounded-2xl border-transparent hover:border-white transition-all min-h-[50px] sm:text-base sm:px-4 sm:py-4 text-xs duration-300"
+              >
+                <Icon name="mdi:account" class="w-6 h-6" />
+                <span class="sm:block">Sobre mí</span>
+              </a>
+            </li>
+            <li
+              class="flex justify-center w-full md:w-auto not-sm:hover:bg-gray-800 border-transparent transition-all min-h-[50px] sm:text-base text-xs duration-300"
+            >
+              <a
+                href="#projects"
+                class="flex items-center md:w-auto not-sm:w-full justify-center gap-2 md:py-2 sm:hover:bg-gray-800 rounded-2xl border-transparent hover:border-white transition-all min-h-[50px] sm:text-base sm:px-4 sm:py-4 text-xs duration-300"
+              >
+                <Icon name="mdi:folder" class="w-6 h-6" />
+                <span class="sm:block">Proyectos</span>
+              </a>
+            </li>
+            <li
+              class="flex justify-center w-full md:w-auto not-sm:hover:bg-gray-800 border-transparent transition-all min-h-[50px] sm:text-base text-xs duration-300"
+            >
+              <a
+                href="#contact"
+                class="flex items-center md:w-auto not-sm:w-full justify-center gap-2 md:py-2 sm:hover:bg-gray-800 rounded-2xl border-transparent hover:border-white transition-all min-h-[50px] sm:text-base sm:px-4 sm:py-4 text-xs duration-300"
+              >
+                <Icon name="mdi:email" class="w-6 h-6" />
+                <span class="sm:block">Contacto</span>
+              </a>
+            </li>
+          </ul>
+        </MenuItems>
+      </div>
+    </Astronav>
   </div>
-  <nav class="col-span-1 justify-self-center text-white">
-    <ul class="flex gap-4">
-      <li><a href="/" class="text-xl font-bold hover:text-gray-700 px-6">Inicio</a></li>
-      <li><a href="/about" class="text-xl font-bold hover:text-gray-700 px-6">Sobre mí</a></li>
-      <li><a href="/projects" class="text-xl font-bold hover:text-gray-700 px-6">Proyectos</a></li>
-      <li><a href="/contact" class="text-xl font-bold hover:text-gray-700 px-6">Contacto</a></li>
-    </ul>
-  </nav>
 </header>
-  

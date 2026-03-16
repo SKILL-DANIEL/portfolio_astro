@@ -1,0 +1,47 @@
+---
+import Input from "./ui/Input.astro";
+import Button from "./ui/Button.astro";
+---
+
+<section data-aos="fade-up" id="contact" class="my-10 px-4">
+  <h2 class="text-3xl font-bold text-center mb-4">Contacto</h2>
+  <p class="text-center mb-6">
+    ¡Me encantaría saber de ti! Si tienes alguna pregunta o quieres colaborar,
+    no dudes en contactarme.
+  </p>
+  <form
+    action="https://formspree.io/f/xjvjlqzj"
+    method="POST"
+    class="contact-form"
+  >
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <Input id="name" label="Nombre" type="text" placeholder="Tu nombre" />
+      <Input
+        id="email"
+        label="Correo electronico"
+        type="email"
+        placeholder="Tu correo electrónico"
+        contentStyle="mb-2"
+      />
+      <Input
+        id="message"
+        label="Mensaje"
+        type="textarea"
+        placeholder="Tu mensaje"
+        contentStyle="mb-2"
+      />
+    </div>
+
+    <Button
+      label="Enviar"
+      type="submit"
+      class="mt-4 bg-blue-600 hover:bg-blue-700 text-white"
+      onclick={() => {
+        // Aquí puedes agregar lógica adicional si es necesario
+      }}
+    />
+  </form>
+  <p class="text-sm text-gray-500 mt-4">
+    Tu información es confidencial y no será compartida.
+  </p>
+</section>

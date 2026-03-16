@@ -1,0 +1,17 @@
+---
+import { projects } from "../constants/projects";
+import ProjectsItem from "./ProjectsItem.astro";
+---
+
+<section data-aos="fade-up" id="projects" class="my-10 px-4">
+  <div
+    class="w-full max-w-[1400px] auto-rows-[30rem] gap-4 px-4 py-8 sm:py-4 mx-auto"
+  >
+    <h2 class="text-3xl font-bold text-center mb-8">Proyectos</h2>
+    <ul
+      class="gap-4 grid lg:grid-cols-3 md:grid-cols-2 not-sm:grid-cols-1 mx-auto"
+    >
+      {projects.map((project) => <ProjectsItem project={project} />)}
+    </ul>
+  </div>
+</section>
